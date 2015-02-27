@@ -47,16 +47,26 @@ public class MyDrawable extends Drawable {
         p.setColor(0xffff0000);
         c.drawCircle(w * 0.2f, h * 0.2f, 20, p);
         p.setColor(0xff00ff00);
-        c.drawCircle(w * 0.8f, h * 0.8f, 20, p);
+        c.drawCircle(w * 0.83f, h * 0.95f, 20, p);
     }
 
     private void drawMaze(Paint p,Canvas c, int w, int h) {
         p.setColor(0xff000000);
-//        c.drawRect(0, 0, w, h / 10, p);
-//        c.drawRect(0, 0, w / 10, h, p);
-//        c.drawRect(w*9/10,0,w,h,p);
-//        c.drawRect(0, h * 9 / 10, w, h, p);
-        c.drawRect(w*.2f,h*0.45f,w*.8f,h*.55f,p);
+        w=w/15;
+        h=h/9;
+
+        c.drawRect(w*0,h*0,w*1,h*4,p);
+        c.drawRect(w*0,h*3,w*5,h*4,p);
+        c.drawRect(w*3,h*5,w*7,h*6f,p);
+        c.drawRect(w*6,0,w*7,h*6,p);
+        c.drawRect(w*2,h*7,w*10,h*8,p);
+        c.drawRect(w*9,h*1,w*10,h*8,p);
+        c.drawRect(w*11,0,w*12,h*6,p);
+        c.drawRect(w*13,h*2,w*14,h*7,p);
+        c.drawRect(w*11,h*7,w*14,h*8,p);
+        c.drawRect(w*11,h*7,w*12,h*9,p);
+        c.drawRect(w*4,h*1,w*5,h*4,p);
+
     }
 
     @Override
